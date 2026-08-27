@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forest Key — text adventure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Forest Key</h1>
+      <p class="tagline">A tiny text adventure — choose your path.</p>
+    </header>
+
+    <section id="story" class="panel" aria-live="polite"></section>
+
+    <section id="choices" class="choices" aria-label="Choices"></section>
+
+    <div class="meta">
+      <span>Inventory: <strong id="inventory">—</strong></span>
+      <button type="button" id="btn-restart" class="ghost">Restart</button>
+    </div>
+
+    <p class="footer-note">Static HTML + JS — works locally and on GitHub Pages.</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

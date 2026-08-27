@@ -32,7 +32,14 @@ Choose **one** from this list. Same session structure for both kids; story/art d
 | **C. Number / word guess** | Easy | Input + feedback loop |
 | **D. Simple canvas dodge / catch** | Harder | Needs a game loop — good stretch for Jiahe |
 
-**Starter example in this repo:** [docs/examples/canvas-dodge/](examples/canvas-dodge/) (`Sky Catch`). Copy into `games/sky-catch/` on their site — **fully publishable** on GitHub Pages once it works locally (static HTML/JS only).
+**Starter examples in this repo**
+
+| Game | Folder | Best for |
+|------|--------|----------|
+| **Sky Catch** (canvas dodge/catch) | [examples/canvas-dodge/](examples/canvas-dodge/) | Jiahe stretch / anyone after a clicker |
+| **Forest Key** (text adventure) | [examples/text-adventure/](examples/text-adventure/) | Jiahan or anyone who likes story |
+
+Copy either folder into `games/…` on their site — **fully publishable** on GitHub Pages once it works locally (static HTML/JS only).
 
 **Recommendation**
 
