@@ -26,6 +26,7 @@ Week 4+:  Git collaboration, deploy, optional Hugo for Jiahe (16)
 | 2. Pick a site builder | [docs/choosing-a-site-builder.md](docs/choosing-a-site-builder.md) |
 | 3. Build with Quarto | [docs/quarto-setup.md](docs/quarto-setup.md) |
 | 4. Publish your own site | [docs/own-your-site.md](docs/own-your-site.md) |
+| 5. Next session: Projects + gallery | [docs/session-projects-gallery.md](docs/session-projects-gallery.md) |
 
 ## Flagship project: Journal site (markdown → Quarto)
 
