@@ -16,6 +16,7 @@ By the end of this session you should have:
 - [ ] At least **2 project cards** (title + 1–2 sentences + optional link)
 - [ ] A **photo gallery** section with **3–5 images** and short captions
 - [ ] Link in the **navbar** and on the **home page**
+- [ ] Theme choice checked (keep or change — see [Theme change](#theme-change))
 - [ ] Changes **pushed** and visible on your **live** GitHub Pages URL
 - [ ] One note: what AI got wrong (or what you changed)
 
@@ -160,6 +161,112 @@ Add 3 bullets to today’s journal entry, or create `FEATURE.md` in your site ro
 
 ---
 
+## Theme change
+
+Your Quarto site has one **main theme** in `_quarto.yml`. That theme styles **every** page (Home, Journal, and the new Projects page) unless you override it.
+
+### What you already have
+
+| Person | Typical setting today | Look |
+|--------|----------------------|------|
+| **Jiahan** | `theme: journal` | Bootswatch **journal** — lighter, “magazine” feel. The whole site (including Journal) uses these colors. |
+| **Jiahe** | `theme: darkly` | Dark background, high contrast. |
+
+If Jiahan’s site “looks different on Journal,” that is usually because:
+
+1. The site theme is already named **`journal`** (Bootswatch), so Journal pages feel “on brand,” and/or  
+2. Journal entries use headings, quotes, or images that make the same theme *feel* different from Home.
+
+**Important:** Adding Projects does **not** automatically get a new color scheme. Projects will match Home/Journal until you change the theme or add CSS.
+
+### Option A — Change the whole site theme (simplest)
+
+1. Open `_quarto.yml`.
+2. Find:
+
+```yaml
+format:
+  html:
+    theme: journal    # Jiahan example — Jiahe may see darkly
+```
+
+3. Try another Bootswatch name, for example:
+
+| Theme | Vibe |
+|-------|------|
+| `flatly` | Clean, flat, bright |
+| `darkly` | Dark mode |
+| `minty` | Soft green |
+| `cosmo` | Modern blue |
+| `litera` | Simple reading |
+| `journal` | Soft serif / blog (Jiahan’s current) |
+| `sketchy` | Hand-drawn (fun, less “serious”) |
+
+4. Preview:
+
+```bash
+quarto preview
+```
+
+5. Click Home → Journal → Projects. Pick the theme that still feels like *you* on all three.
+
+Cursor prompt:
+
+```text
+Open _quarto.yml. List 3 Bootswatch themes that would fit a teen projects + photo gallery site.
+Change theme: to the one I pick. Do not change navbar links.
+```
+
+### Option B — Keep site theme, tweak colors in CSS
+
+Good if Jiahan wants to **keep** `journal` but make Projects (or the whole site) a bit more personal.
+
+Edit `styles.css`, for example:
+
+```css
+/* Soft accent for links and buttons */
+a { color: #2c6e49; }
+
+.navbar {
+  border-bottom: 3px solid #2c6e49;
+}
+```
+
+Preview after every small change. Prefer tiny edits over rewriting the whole theme.
+
+### Option C — Different look on one page only (optional / advanced)
+
+Most pages should share one theme. If you really want Projects to differ slightly, you can set format in that page’s YAML:
+
+```markdown
+---
+title: "Projects"
+format:
+  html:
+    theme: minty
+---
+```
+
+Use this sparingly — mixed themes can feel random. Prefer Option A or B for this session.
+
+### Theme checklist for today
+
+- [ ] I know which `theme:` is in my `_quarto.yml`
+- [ ] I either **kept** it on purpose or **changed** it and re-checked Home + Journal + Projects
+- [ ] Projects page does not look “broken” (readable text, visible navbar)
+- [ ] Pushed the `_quarto.yml` / `styles.css` change with the Projects feature
+
+### Jiahan-specific note
+
+You already chose **`journal`**. For today’s feature you can:
+
+1. **Keep `journal`** and focus on Projects + gallery content, **or**
+2. **Switch** to another theme if you want the new Projects page to feel fresher — then confirm Journal still looks good.
+
+Do not fight the theme with huge custom CSS unless the gallery layout needs a small fix.
+
+---
+
 ## Cursor prompts if you get stuck
 
 **Navbar not updating**
@@ -182,14 +289,23 @@ Improve the photo gallery layout in projects.qmd for mobile.
 Keep it simple — prefer Quarto/markdown over custom JavaScript.
 ```
 
+**Theme / colors**
+
+```text
+Read _quarto.yml and styles.css. Explain my current theme in one sentence.
+I want [brighter | darker | greener] colors but keep the same navbar.
+Suggest either a new theme: name or 5 lines of CSS — show the plan first.
+```
+
 ---
 
 ## Parent coach notes
 
 - Same feature for both kids → easier to help; content differs.
+- Jiahan already on Bootswatch `journal` — validate whether they keep it or switch; don’t assume Journal needs a separate theme file.
 - Block scope creep (no Hugo, no APIs, no lightbox libraries unless finished early).
 - Success = **live URL shows the page**, not a perfect design.
-- If someone finishes early: link each project to a journal entry, or add a third project card.
+- If someone finishes early: link each project to a journal entry, theme polish, or a third project card.
 
 ---
 
