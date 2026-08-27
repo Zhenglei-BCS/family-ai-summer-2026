@@ -315,4 +315,5 @@ Next options:
 
 1. Improve the gallery layout / captions.
 2. Git: branch + pull request for the next change (Week 4 skill).
-3. Jiahe only: start optional Hugo track later — not today.
+3. **Build a tiny game with Cursor Agent:** [session-agent-minigame.md](session-agent-minigame.md)
+4. Jiahe only: start optional Hugo track later — not required yet.
