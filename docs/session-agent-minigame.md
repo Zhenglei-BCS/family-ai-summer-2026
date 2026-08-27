@@ -32,6 +32,8 @@ Choose **one** from this list. Same session structure for both kids; story/art d
 | **C. Number / word guess** | Easy | Input + feedback loop |
 | **D. Simple canvas dodge / catch** | Harder | Needs a game loop — good stretch for Jiahe |
 
+**Starter example in this repo:** [docs/examples/canvas-dodge/](examples/canvas-dodge/) (`Sky Catch`). Copy into `games/sky-catch/` on their site — **fully publishable** on GitHub Pages once it works locally (static HTML/JS only).
+
 **Recommendation**
 
 - **Jiahan (14):** A or B  
