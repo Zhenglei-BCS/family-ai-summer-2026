@@ -26,8 +26,9 @@ Week 4+:  Git collaboration, deploy, optional Hugo for Jiahe (16)
 | 2. Pick a site builder | [docs/choosing-a-site-builder.md](docs/choosing-a-site-builder.md) |
 | 3. Build with Quarto | [docs/quarto-setup.md](docs/quarto-setup.md) |
 | 4. Publish your own site | [docs/own-your-site.md](docs/own-your-site.md) |
-| 5. Next session: Projects + gallery | [docs/session-projects-gallery.md](docs/session-projects-gallery.md) |
-| 6. Later: mini-game with Agent | [docs/session-agent-minigame.md](docs/session-agent-minigame.md) |
+| 5. **Game with Agent → then Projects** | [docs/session-game-then-projects.md](docs/session-game-then-projects.md) |
+| 5a. Part 1 — mini-game | [docs/session-agent-minigame.md](docs/session-agent-minigame.md) |
+| 5b. Part 2 — Projects page | [docs/session-projects-gallery.md](docs/session-projects-gallery.md) |
 
 ## Flagship project: Journal site (markdown → Quarto)
 

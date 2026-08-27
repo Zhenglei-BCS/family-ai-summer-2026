@@ -1,11 +1,15 @@
 # Session: Build a small interactive game with an AI agent
 
-**Goal:** Use **Cursor Agent** (not just chat autocomplete) to ship a **tiny playable game** on your site.
+**Part 1 of 2** — next: put the game on your [Projects page](session-projects-gallery.md)
+
+**Goal:** Use **Cursor Agent** to ship a **tiny playable game**, then (in Part 2) feature it under Projects.
 
 **Time:** about 90–120 minutes (can split across two days)  
 **Who:** Jiahe (16) and Jiahan (14)  
-**Best after:** Projects page + gallery is live  
+**When:** after your personal site is live; **before** (or just before) building the full Projects page  
 **Where:** your own `jiahe-site` / `jiahan-site` repo
+
+**Big picture:** [Game first → Projects](session-game-then-projects.md)
 
 ---
 
@@ -152,7 +156,9 @@ Do not refactor unrelated files. Show the diff.
 
 ---
 
-## Step 4 — Hook it to your Quarto site (15 min)
+## Step 4 — Put the game on your site (playable URL) (15 min)
+
+You do **not** need a full Projects page yet. First make the game open from your site.
 
 Options (pick one):
 
@@ -174,24 +180,23 @@ My summer mini-game. Built with Cursor Agent — I designed the rules.
 
 **B. Link out to a static HTML file** in `games/clicker/index.html` (simpler debugging).
 
-Then:
-
-- Add **Games** or link under **Projects**
-- Update navbar in `_quarto.yml` if you want a top-level link
+Optional for today: a temporary Home link “Play my game.”  
+**Part 2** will add a proper **Projects** card and navbar entry.
 
 Agent prompt:
 
 ```text
-Link my game into the Quarto site: add games/clicker.qmd (or a Projects card)
-and a navbar or Projects link. Keep theme unchanged. Plan first.
+Make my game open from this Quarto site: add games/<name>.qmd or link to
+games/<name>/index.html. Keep theme unchanged. Plan first.
+Do not build a full Projects page yet — that is the next session.
 ```
 
 ---
 
-## Step 5 — Ship (10 min)
+## Step 5 — Ship the game (10 min)
 
 ```bash
-git add games/ projects.qmd _quarto.yml
+git add games/
 git commit -m "Add mini-game built with Cursor Agent"
 git push
 ```
@@ -216,6 +221,21 @@ Write in the journal or `games/README.md`:
 ```
 
 This is the real AI lesson — not the cookie counter.
+
+---
+
+## Next — Part 2: Projects page
+
+When the game works live, continue here:
+
+→ **[session-projects-gallery.md](session-projects-gallery.md)**
+
+You will:
+
+1. Create `projects.qmd`
+2. Add a **project card for this game** (title, 1–2 sentences, link to `games/…`)
+3. Optionally add a second project + photo gallery
+4. Link Projects in the navbar and on Home
 
 ---
 
@@ -261,7 +281,8 @@ git checkout -- games/clicker/app.js
 - Prefer **text adventure** if someone freezes at JavaScript — story is the product; JS is buttons + state.
 - Cap scope: 3 rooms or 1 clicker loop. Expanding is next weekend.
 - Success = **playable on live site** + honest retrospective, not polished art.
-- Tie back to Projects: add a project card “Mini-game (Agent-built)” with link.
+- **Do not** build the full Projects page in this session — that is Part 2.
+- After Part 1: continue to [session-projects-gallery.md](session-projects-gallery.md) and feature the game as project card #1.
 
 ---
 

@@ -1,10 +1,15 @@
 # Session: Projects page + photo gallery
 
-**Goal:** Add one new feature to your live site — a **Projects** page that includes a small **photo gallery**.
+**Part 2 of 2** — after your [mini-game with Agent](session-agent-minigame.md)
+
+**Goal:** Add a **Projects** page that features your game (and optionally a photo gallery).
 
 **Time:** about 60–90 minutes  
 **Who:** Jiahe (16) and Jiahan (14)  
-**Where:** work in **your own** `jiahe-site` / `jiahan-site` repo (not the family curriculum folder, unless that is still how you deploy)
+**Where:** work in **your own** `jiahe-site` / `jiahan-site` repo  
+**Prerequisite:** a playable game under `games/` on your live site (Part 1)
+
+**Big picture:** [Game first → Projects](session-game-then-projects.md)
 
 ---
 
@@ -13,8 +18,9 @@
 By the end of this session you should have:
 
 - [ ] A new page: `projects.qmd` (or `projects/index.qmd`)
-- [ ] At least **2 project cards** (title + 1–2 sentences + optional link)
-- [ ] A **photo gallery** section with **3–5 images** and short captions
+- [ ] A **project card for your mini-game** (title + 1–2 sentences + link to `games/…`)
+- [ ] At least **one more** project card (hobby, school, or “coming soon”) — or a short “More projects later” note
+- [ ] Optional: a **photo gallery** section with **3–5 images** and short captions
 - [ ] Link in the **navbar** and on the **home page**
 - [ ] Theme choice checked (keep or change — see [Theme change](#theme-change))
 - [ ] Changes **pushed** and visible on your **live** GitHub Pages URL
@@ -25,21 +31,21 @@ By the end of this session you should have:
 ## Before you start (5 min)
 
 1. Open your site repo in Cursor.
-2. Check remotes — `origin` should be **your** GitHub user:
+2. Confirm Part 1 is done: you can open your game on the **live** site (e.g. `/games/forest-key/` or `/games/sky-catch/`).
+3. Check remotes — `origin` should be **your** GitHub user:
 
 ```bash
 git remote -v
 ```
 
-3. Confirm the live site loads on your phone.
-4. Create a folder for images if you do not have one:
+4. Optional gallery: create an images folder if you will add photos:
 
 ```text
 images/
   projects/     ← put gallery photos here
 ```
 
-**Photo rules**
+**Photo rules** (only if you add a gallery)
 
 - Use your own photos, or royalty-free images.
 - No private photos of other people without permission.
@@ -55,14 +61,13 @@ On paper or in a note, fill this in:
 | Item | Your answer |
 |------|-------------|
 | Page title | Projects |
-| Project 1 | name + one sentence |
-| Project 2 | name + one sentence |
+| **Project 1 (your game)** | name + one sentence + URL path (`games/…`) |
+| Project 2 | hobby / school / “next idea” |
 | Optional project 3 | … |
-| Gallery theme | e.g. “summer hobbies”, “builds”, “trips” |
-| 3–5 photo filenames | … |
+| Gallery? | yes / no — if yes, theme + 3–5 filenames |
 
-Jiahan ideas: games, sports, crafts, pets, summer outings.  
-Jiahe ideas: coding experiments, school projects, music, sports, portfolio pieces.
+Jiahan ideas for project 2: games, sports, crafts, pets.  
+Jiahe ideas: coding experiments, school projects, music, sports.
 
 ---
 
@@ -71,38 +76,47 @@ Jiahe ideas: coding experiments, school projects, music, sports, portfolio piece
 Paste this prompt (edit the bits in brackets):
 
 ```text
-I have a Quarto website. Help me add a Projects page with a small photo gallery.
+I have a Quarto website and a finished mini-game at [games/forest-key/ or games/sky-catch/].
+
+Help me add a Projects page that FEATURES the game first.
 
 Requirements:
-- Create projects.qmd at the site root (or projects/index.qmd if that fits our layout better)
-- Include 2–3 project sections with headings and short descriptions I will fill in
-- Include a Photo gallery section that shows images from images/projects/ with captions
-- Add the page to the navbar in _quarto.yml
+- Create projects.qmd at the site root (or projects/index.qmd if that fits better)
+- First project card = my mini-game (title, 1–2 sentences I will write, link to the game)
+- Second project card = placeholder I will fill in
+- Optional: Photo gallery section using images/projects/
+- Add Projects to the navbar in _quarto.yml
 - Add a link to Projects from index.qmd
-- Keep my existing theme and style
-- Show me the plan first; wait for my OK before editing files
+- Keep my existing theme
+- Show the plan first; wait for my OK before editing files
 ```
 
-Read the plan. Say OK only if it matches your sketch.
+Read the plan. Say OK only if the **game is the first featured project**.
 
 ---
 
 ## Step 3 — Build (30–40 min)
 
 1. Let Cursor create/edit the files.
-2. **You** write the real project text — do not leave “Project 1 placeholder” forever.
-3. Drop your images into `images/projects/`.
-4. In the gallery, use markdown images, for example:
+2. **You** write the real text for the game card, for example:
+
+```markdown
+## Sky Catch
+
+A canvas dodge-and-catch game I built with Cursor Agent.
+I designed the rules; the agent helped write the JavaScript.
+
+[Play Sky Catch →](games/sky-catch/index.html)
+```
+
+3. Fill in project 2 yourself (not “Project 2 placeholder”).
+4. If you want a gallery, drop images into `images/projects/` and use markdown images:
 
 ```markdown
 ## Photo gallery
 
 ![Caption for photo one](images/projects/summer-bike.jpg)
-
-![Caption for photo two](images/projects/lego-build.png)
 ```
-
-Or ask Cursor for a simple Quarto-friendly gallery layout (columns / grid) that still works on phones.
 
 5. Preview locally:
 
@@ -110,7 +124,7 @@ Or ask Cursor for a simple Quarto-friendly gallery layout (columns / grid) that 
 quarto preview
 ```
 
-Click: Home → Projects → each image → navbar link. Fix anything broken.
+Click: Home → Projects → **Play game** → back → navbar. Fix anything broken.
 
 ---
 
@@ -301,19 +315,21 @@ Suggest either a new theme: name or 5 lines of CSS — show the plan first.
 
 ## Parent coach notes
 
-- Same feature for both kids → easier to help; content differs.
-- Jiahan already on Bootswatch `journal` — validate whether they keep it or switch; don’t assume Journal needs a separate theme file.
+- Same structure for both kids → easier to help; content differs.
+- **First card must be the game** from Part 1 — that is the point of this order.
+- Gallery is optional; do not block shipping Projects on photos.
+- Jiahan may already use Bootswatch `journal` — keep or change on purpose (see Theme change).
 - Block scope creep (no Hugo, no APIs, no lightbox libraries unless finished early).
-- Success = **live URL shows the page**, not a perfect design.
-- If someone finishes early: link each project to a journal entry, theme polish, or a third project card.
+- Success = **live URL shows Projects + working game link**, not a perfect design.
+- If someone finishes early: link projects to journal entries, theme polish, or a third card.
 
 ---
 
 ## After this session
 
-Next options:
+You already shipped the game (Part 1) and featured it on Projects (Part 2). Next options:
 
-1. Improve the gallery layout / captions.
+1. Improve the gallery layout / captions (if you added one).
 2. Git: branch + pull request for the next change (Week 4 skill).
-3. **Build a tiny game with Cursor Agent:** [session-agent-minigame.md](session-agent-minigame.md)
+3. Improve the game (new room, high score, harder levels) with Agent again.
 4. Jiahe only: start optional Hugo track later — not required yet.
